@@ -1,5 +1,7 @@
 package base;
 
+import java.util.logging.Logger;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,8 +13,10 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverFactory {
 
+    private static final Logger logger = Logger.getLogger(DriverFactory.class.getName());
+
     public static WebDriver create(BrowserConfig config) {
-        System.out.println("DriverFactory.create() called");
+        logger.info("Creating WebDriver");
 
         switch (config.getBrowser().toLowerCase()) {
 

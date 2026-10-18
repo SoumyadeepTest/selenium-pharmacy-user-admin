@@ -1,5 +1,7 @@
 package login;
 
+import java.util.logging.Logger;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -7,12 +9,13 @@ import base.BaseTest;
 
 public class LoginTest extends BaseTest {
 
+    private static final Logger logger = Logger.getLogger(LoginTest.class.getName());
+
     @Test
     public void testLogin() {
-        System.out.println("Login Test");
+        logger.info("Login test");
         WebDriver driver = getDriver();
-        enterApplication(driver);
-        // Add your login test steps here
+        enterUserApp(driver);
     }
 
 }

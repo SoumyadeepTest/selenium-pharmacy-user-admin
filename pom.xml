@@ -19,7 +19,7 @@
     <wdm.version>6.3.2</wdm.version>
     <allure.version>2.29.1</allure.version>
     <log4j.version>2.25.1</log4j.version>
-    <lombok.version>1.18.46</lombok.version>
+    <lombok.version>1.18.48</lombok.version>
   </properties>
 
   <dependencies>

@@ -2,6 +2,8 @@ package base;
 
 import java.io.ByteArrayInputStream;
 import java.time.Duration;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -20,19 +22,16 @@ import listeners.TestListener;
 // sdfdsf
 public class BaseTest {
 
+    private static final Logger logger = Logger.getLogger(BaseTest.class.getName());
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     @SuppressWarnings("null")
     @BeforeMethod(alwaysRun = true)
-    @Parameters({ "browser", "headless", "screen" })
+    @Parameters({"browser", "headless", "screen"})
 
     public void setDriver(@Optional("chrome") String browser, @Optional("false") boolean headless,
             @Optional("DESKTOP") String screen) {
-        System.out.println("Creating driver from BaseTest3");
-        // System.out.println(
-        // "Browser = " + browser +
-        // ", Headless = " + headless +
-        // ", Screen = " + screen);
+        logger.info("Creating WebDriver");
         BrowserConfig config = BrowserConfig.builder()
                 .browser(browser)
                 .headless(headless)
@@ -41,35 +40,34 @@ public class BaseTest {
 
         driver.set(DriverFactory.create(config));
 
-        System.out.println("Actual Window Size: "
-                + getDriver().manage().window().getSize());
+        logger.info("Actual window size: " + getDriver().manage().window().getSize());
         getDriver().manage().timeouts()
                 .implicitlyWait(Duration.ofSeconds(10));
 
     }
 
-    String landingUrl = "https://aparna-three.witkid.in/";
-    String adminUrl = "https://clarivanceone.witkid.in/";
+    String userUrl = "https://clarivanceone.witkid.in/";
+    String adminUrl = "https://aparna-three.witkid.in/";
 
     @SuppressWarnings("null")
-    public void enterApplication(WebDriver driver) {
-        driver.get(landingUrl);
-        // Wait for page to fully load
+    public boolean enterAdminApplication(WebDriver driver) {
         try {
-            Thread.sleep(2000); // Allow React/Angular to initialize
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+            driver.get(adminUrl);
+            return true;
+        } catch (Exception e) {
+            logger.log(Level.WARNING, "Cannot open admin application page", e);
+            return false;
         }
     }
 
     @SuppressWarnings("null")
-    public void enterAdminApplication(WebDriver driver) {
-        driver.get(adminUrl);
-        // Wait for page to fully load
+    public boolean enterUserApp(WebDriver driver) {
         try {
-            Thread.sleep(2000); // Allow React/Angular to initialize
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+            driver.get(userUrl);
+            return true;
+        } catch (Exception e) {
+            logger.log(Level.WARNING, "Cannot open user application page", e);
+            return false;
         }
     }
 
@@ -116,7 +114,7 @@ public class BaseTest {
 
             if (currentDriver != null) {
 
-                System.out.println("Closing driver...");
+                logger.info("Closing driver");
                 currentDriver.quit();
             }
 
@@ -145,15 +143,11 @@ public class BaseTest {
                     new ByteArrayInputStream(screenshot),
                     ".png");
 
-            System.out.println(
-                    "Screenshot successfully attached to Allure: "
-                            + testName);
+            logger.info("Screenshot successfully attached to Allure: " + testName);
 
         } catch (Exception e) {
 
-            System.out.println(
-                    "Screenshot FAILED: "
-                            + e.getMessage());
+            logger.log(Level.WARNING, "Screenshot failed for test: " + testName, e);
         }
     }
 
