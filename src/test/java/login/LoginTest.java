@@ -3,6 +3,7 @@ package login;
 import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -18,8 +19,7 @@ public class LoginTest extends BaseTest {
         WebDriver driver = getDriver();
         enterUserApp(driver);
         LoginController loginController = new LoginController(driver);
-        boolean isHeaderDisplayed = loginController.isHeaderSectionDisplayed();
-        logger.info(() -> "Is header section displayed: " + isHeaderDisplayed);
+        Assert.assertTrue(loginController.isHeaderSectionDisplayed());
     }
 
 }
