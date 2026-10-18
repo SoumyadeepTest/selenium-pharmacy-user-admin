@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import controller.LoginController;
 
 public class LoginTest extends BaseTest {
 
@@ -16,6 +17,9 @@ public class LoginTest extends BaseTest {
         logger.info("Login test");
         WebDriver driver = getDriver();
         enterUserApp(driver);
+        LoginController loginController = new LoginController(driver);
+        boolean isHeaderDisplayed = loginController.isHeaderSectionDisplayed();
+        logger.info(() -> "Is header section displayed: " + isHeaderDisplayed);
     }
 
 }

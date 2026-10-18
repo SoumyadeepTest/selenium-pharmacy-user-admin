@@ -216,7 +216,7 @@ public class GlobalUtils {
         }
     }
 
-    private void waitForPageLoad() {
+    public void waitForPageLoad() {
         try {
             new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(05))
                     .until(webDriver -> ((org.openqa.selenium.JavascriptExecutor) webDriver)
