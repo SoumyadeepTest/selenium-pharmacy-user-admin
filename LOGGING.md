@@ -12,6 +12,17 @@ public class LoginController {
 }
 ```
 
+## Test log files
+
+When tests run through Maven Surefire, JUL writes application and test messages
+at `INFO` and above to `out.log`. This keeps normal lifecycle events while
+filtering verbose library/JDK diagnostics such as `FINE` and `FINER` messages.
+TestNG failures are also written to `error.log`, including the failing test
+name and exception stack trace. Both files are created in the Maven project root
+and appended to on subsequent runs. They are intentionally allowed by
+`.gitignore` so they can be added to Git when needed; review them for secrets or
+personal data before committing.
+
 ## Choosing a log level
 
 Use the lowest level that communicates the event accurately. Levels are listed

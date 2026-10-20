@@ -1,0 +1,36 @@
+2026-10-20 11:53:27 [INFO] Creating WebDriver
+2026-10-20 11:53:27 [INFO] Creating WebDriver
+2026-10-20 11:53:27 [WARNING] Unable to find CDP implementation matching 155
+2026-10-20 11:53:27 [WARNING] Unable to find version of CDP to use for 155.0.8059.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+2026-10-20 11:53:27 [INFO] Actual window size: (1920, 1080)
+2026-10-20 11:53:27 [INFO] Login test
+2026-10-20 11:53:29 [INFO] ========== TEST PASSED: testLogin ==========
+2026-10-20 11:53:29 [INFO] Screenshot successfully attached to Allure: SUCCESS - testLogin
+2026-10-20 11:53:29 [INFO] Closing driver
+2026-10-20 12:01:42 [INFO] Creating WebDriver
+2026-10-20 12:01:42 [INFO] Creating WebDriver
+2026-10-20 12:01:42 [WARNING] Unable to find CDP implementation matching 155
+2026-10-20 12:01:42 [WARNING] Unable to find version of CDP to use for 155.0.8059.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+2026-10-20 12:01:42 [INFO] Actual window size: (1920, 1080)
+2026-10-20 12:01:42 [INFO] Login test
+2026-10-20 12:01:54 [WARNING] Header section element is not displayed: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='/loginsdfsdf']"}
+  (Session info: chrome=155.0.8059.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [430f1f630207b36fe5640fd18decd805, findElement {value=//a[@href='/loginsdfsdf'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\Leo\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61704}, goog:processID: 7232, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61704/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 430f1f630207b36fe5640fd18decd805
+2026-10-20 12:01:54 [WARNING] ========== TEST FAILED: testLogin ==========
+2026-10-20 12:01:54 [INFO] Screenshot successfully attached to Allure: FAILURE - testLogin
+2026-10-20 12:01:54 [INFO] Closing driver
+2026-10-20 12:21:01 [INFO] Creating WebDriver
+2026-10-20 12:21:01 [INFO] Creating WebDriver
+2026-10-20 12:21:02 [WARNING] Unable to find CDP implementation matching 155
+2026-10-20 12:21:02 [WARNING] Unable to find version of CDP to use for 155.0.8059.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+2026-10-20 12:21:02 [INFO] Actual window size: (1920, 1080)
+2026-10-20 12:21:02 [INFO] Login test
+2026-10-20 12:21:04 [INFO] ========== TEST PASSED: testLogin ==========
+2026-10-20 12:21:04 [INFO] Screenshot successfully attached to Allure: SUCCESS - testLogin
+2026-10-20 12:21:04 [INFO] Closing driver

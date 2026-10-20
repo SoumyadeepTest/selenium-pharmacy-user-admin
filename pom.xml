@@ -89,6 +89,9 @@
           </includes>
           <parallel>methods</parallel>
           <threadCount>3</threadCount>
+          <systemPropertyVariables>
+            <java.util.logging.config.file>${project.basedir}/src/test/resources/logging.properties</java.util.logging.config.file>
+          </systemPropertyVariables>
         </configuration>
       </plugin>
       <plugin>
