@@ -21,6 +21,11 @@ public class LoginTest extends BaseTest {
         LoginController loginController = new LoginController(driver);
         Assert.assertTrue(loginController.isHeaderSectionDisplayed());
         Assert.assertTrue(loginController.gotoLoginPage());
+        Assert.assertTrue(loginController.isLoginPageDisplayed());
+        Assert.assertTrue(loginController.validateLoginPageTexts());
+        Assert.assertTrue(loginController.enterMobileNumber("9111111111"));
+        Assert.assertTrue(loginController.isEnterOtpPageDisplayed());
+        Assert.assertTrue(loginController.enterOtp("123456"));
     }
 
 }
