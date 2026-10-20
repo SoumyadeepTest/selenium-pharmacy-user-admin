@@ -29,7 +29,7 @@ public class GlobalUtils {
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].scrollIntoView();", element);
-            return true;
+            return isActuallyDisplayed(element);
         } catch (Exception e) {
             logger.log(Level.WARNING, "Unable to scroll element into view", e);
             return false;
@@ -152,14 +152,16 @@ public class GlobalUtils {
         js.executeScript("arguments[0].click();", element);
     }
 
-    public void safeClick(WebElement element) {
+    public boolean safeClick(WebElement element) {
         try {
             scrollIntoElement(element);
             waitForClickable(element);
             element.click();
+            return true;
         } catch (Exception e) {
             logger.log(Level.WARNING, "Regular click failed, using JavaScript click", e);
             jsClick(element);
+            return false;
         }
     }
 

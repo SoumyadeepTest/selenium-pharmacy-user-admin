@@ -20,6 +20,7 @@ public class LoginTest extends BaseTest {
         enterUserApp(driver);
         LoginController loginController = new LoginController(driver);
         Assert.assertTrue(loginController.isHeaderSectionDisplayed());
+        Assert.assertTrue(loginController.gotoLoginPage());
     }
 
 }

@@ -46,7 +46,7 @@ public class BaseTest {
 
     }
 
-    String userUrl = "https://clarivanceone.witkid.in/";
+    String userUrl = "https://clarivanceone.com/";
     String adminUrl = "https://aparna-three.witkid.in/";
 
     @SuppressWarnings("null")
