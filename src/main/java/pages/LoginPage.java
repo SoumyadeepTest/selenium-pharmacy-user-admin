@@ -58,6 +58,9 @@ public class LoginPage {
     @FindBy(xpath = "//button[contains(.,'Verify & Login')]")
     private WebElement verifyAndLoginButtonElement;
 
+    @FindBy(css = "p[class='text-[14px] font-bold text-gray-900 group-hover:text-(--primary) transition-colors line-clamp-1 max-w-[120px]']")
+    private WebElement userNameElement;
+
     // for header section
     public WebElement getHeaderSectionElement() {
         return headerSectionElement;
@@ -115,5 +118,9 @@ public class LoginPage {
 
     public WebElement getVerifyAndLoginButtonElement() {
         return verifyAndLoginButtonElement;
+    }
+
+    public WebElement getUserNameElement() {
+        return userNameElement;
     }
 }

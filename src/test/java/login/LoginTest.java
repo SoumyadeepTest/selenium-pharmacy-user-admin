@@ -26,6 +26,7 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(loginController.enterMobileNumber("9111111111"));
         Assert.assertTrue(loginController.isEnterOtpPageDisplayed());
         Assert.assertTrue(loginController.enterOtp("123456"));
+        Assert.assertTrue(loginController.isLoginSuccessful());
     }
 
 }

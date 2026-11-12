@@ -130,4 +130,20 @@ public class LoginController extends GlobalUtils {
         }
     }
 
+    public boolean isLoginSuccessful() {
+        String expectedUserName = "Test 1";
+        try {
+            waitForPageLoad();
+            String actualUserName = loginPage.getUserNameElement().getText();
+            if (!expectedUserName.equals(actualUserName)) {
+                logger.warning(() -> "Expected user name: " + expectedUserName + ", but found: " + actualUserName);
+                return false;
+            }
+            return true;
+        } catch (Exception e) {
+            logger.warning(() -> "Failed to verify login success: " + e.getMessage());
+            return false;
+        } // Replace with the expected user name after login
+
+    }
 }
