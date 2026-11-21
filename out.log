@@ -1,0 +1,47 @@
+2026-11-21 13:08:10 [INFO] Creating WebDriver
+2026-11-21 13:08:10 [INFO] Creating WebDriver
+2026-11-21 13:08:16 [WARNING] Unable to find CDP implementation matching 157
+2026-11-21 13:08:16 [WARNING] Unable to find version of CDP to use for 157.0.8103.79. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+2026-11-21 13:08:16 [INFO] Actual window size: (1920, 1080)
+2026-11-21 13:08:16 [INFO] Login test
+2026-11-21 13:08:24 [INFO] ========== TEST PASSED: testLogin ==========
+2026-11-21 13:08:24 [INFO] Screenshot successfully attached to Allure: SUCCESS - testLogin
+2026-11-21 13:08:24 [INFO] Closing driver
+2026-11-21 13:21:08 [INFO] Creating WebDriver
+2026-11-21 13:21:08 [INFO] Creating WebDriver
+2026-11-21 13:21:09 [WARNING] Unable to find CDP implementation matching 157
+2026-11-21 13:21:09 [WARNING] Unable to find version of CDP to use for 157.0.8103.79. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+2026-11-21 13:21:09 [INFO] Actual window size: (1920, 1080)
+2026-11-21 13:21:09 [INFO] Login test started for mobile: 9111111111
+2026-11-21 13:21:16 [INFO] Login test completed for mobile: 9111111111
+2026-11-21 13:21:16 [INFO] ========== TEST PASSED: testLogin ==========
+2026-11-21 13:21:17 [INFO] Screenshot successfully attached to Allure: SUCCESS - testLogin
+2026-11-21 13:21:17 [INFO] Closing driver
+2026-11-21 13:21:17 [INFO] Creating WebDriver
+2026-11-21 13:21:17 [INFO] Creating WebDriver
+2026-11-21 13:21:17 [WARNING] Unable to find CDP implementation matching 157
+2026-11-21 13:21:17 [WARNING] Unable to find version of CDP to use for 157.0.8103.79. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+2026-11-21 13:21:17 [INFO] Actual window size: (1920, 1080)
+2026-11-21 13:21:17 [INFO] Login test started for mobile: 9222222222
+2026-11-21 13:21:33 [WARNING] Failed to verify login success: no such element: Unable to locate element: {"method":"css selector","selector":"p[class='text-[14px] font-bold text-gray-900 group-hover:text-(--primary) transition-colors line-clamp-1 max-w-[120px]']"}
+  (Session info: chrome=157.0.8103.79)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e822a5ede45c040df81d78aa0bb46495, findElement {using=css selector, value=p[class='text-[14px] font-bold text-gray-900 group-hover:text-(--primary) transition-colors line-clamp-1 max-w-[120px]']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 157.0.8103.79, chrome: {chromedriverVersion: 157.0.8103.78 (4b3d0dabb825..., userDataDir: C:\Users\Leo\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60334}, goog:processID: 30624, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60334/devtoo..., se:cdpVersion: 157.0.8103.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10...., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e822a5ede45c040df81d78aa0bb46495
+2026-11-21 13:21:33 [WARNING] ========== TEST FAILED: testLogin ==========
+2026-11-21 13:21:34 [INFO] Screenshot successfully attached to Allure: FAILURE - testLogin
+2026-11-21 13:21:34 [INFO] Closing driver
+2026-11-21 13:21:34 [INFO] Creating WebDriver
+2026-11-21 13:21:34 [INFO] Creating WebDriver
+2026-11-21 13:21:34 [WARNING] Unable to find CDP implementation matching 157
+2026-11-21 13:21:34 [WARNING] Unable to find version of CDP to use for 157.0.8103.79. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+2026-11-21 13:21:34 [INFO] Actual window size: (1920, 1080)
+2026-11-21 13:21:34 [INFO] Login test started for mobile: 9333333333
+2026-11-21 13:21:41 [WARNING] Expected user name: Test 1, but found: 
+2026-11-21 13:21:41 [WARNING] ========== TEST FAILED: testLogin ==========
+2026-11-21 13:21:41 [INFO] Screenshot successfully attached to Allure: FAILURE - testLogin
+2026-11-21 13:21:41 [INFO] Closing driver
